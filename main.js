@@ -11,6 +11,8 @@ while (elenco_numeri.length<5){
     }
 }
 
+console.log(elenco_numeri)
+
 const all_content = document.querySelector('.all_content')
 const ul = document.createElement('ul');
 const h1 = document.createElement('h1');
@@ -43,7 +45,7 @@ function disapear (){
     
     for(let i = 0; i<elenco_numeri.length; i++){
         let numero_inserito = parseInt(prompt('inserisci un dei numeri'));
-        if(elenco_numeri.includes(numero_inserito)){
+        if(elenco_numeri.includes(numero_inserito) && !numeri_indovinati.includes(numero_inserito)){
             numeri_indovinati.push(numero_inserito);  
         }
         else{
